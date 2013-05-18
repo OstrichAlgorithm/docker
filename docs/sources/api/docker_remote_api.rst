@@ -7,9 +7,9 @@ Docker Remote API
 1. Brief introduction
 =====================
 
-- The Remote API is replacing rcli
-- Default port in the docker deamon is 4243 
-- The API tends to be REST, but for some complex commands, like attach or pull, the HTTP connection in hijacked to transport stdout stdin and stderr
+- The Remote API is replacing ``rcli``
+- Default port in the docker daemon is 4243 
+- The API tends to be REST, but for some complex commands, like ``attach`` or ``pull``, the HTTP connection is highjacked (see :ref:`docker_remote_api_hijacking`) to transport stdout stdin and stderr
 
 2. Endpoints
 ============
@@ -999,6 +999,8 @@ Here are the steps of 'docker run' :
 * If in detached mode or only stdin is attached:
 	* Display the container's id
 
+
+.. _docker_remote_api_hijacking:
 
 3.2 Hijacking
 -------------
